@@ -10,7 +10,7 @@ const provider = new ethers.JsonRpcProvider(SEPOLIA_RPC_URL);
 // Route: Lấy số dư và nonce
 Router.get('/wallet/:address', async (req, res) => {
   const address = req.params.address;
-
+  console.log(address)
   if (!ethers.isAddress(address)) {
     return res.status(400).json({ error: 'Địa chỉ ví không hợp lệ' });
   }
